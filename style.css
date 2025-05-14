@@ -1,0 +1,157 @@
+/* 🎈 BÓNG BAY NÂNG CAO */
+.floating-balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 100px;
+    height: 150px;
+    animation: flyUp 4s linear forwards;
+    z-index: 999;
+  }
+  
+  @keyframes flyUp {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-120vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* TRANG MỞ ĐẦU */
+  .cover-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    text-align: center;
+    font-size: 2rem;
+    background: #fff5f7;
+    padding: 20px;
+  }
+  
+  .decor {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  /* HEADLINE & GALLERY */
+  .headline {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 16px;
+    color: #a83279;
+  }
+  
+  .gallery {
+    padding: 10px;
+  }
+  
+  .image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .image-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+  }
+  
+  .image-row.landscape img,
+  .image-row.full-row img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .image-row.portrait img {
+    max-height: 70vh;
+    width: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .caption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+  }
+  
+  /* PHÂN TRANG */
+  .pagination {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+/*  .pagination button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 8px;
+    border-radius: 8px;
+    background-color: #ffd1dc;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .pagination button:hover {
+    background-color: #ffa8c2;
+  }
+*/
+  .start-button {
+    margin-top: 30px; /* hoặc 40px nếu muốn xa hơn nữa */
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #ff99bb;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .start-button:hover {
+    background-color: #ff77a9;
+  }
+  
+  
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .headline {
+      font-size: 1.1rem;
+    }
+  
+    .cover-page {
+      font-size: 1.5rem;
+      padding: 10px;
+    }
+  
+    .decor {
+      font-size: 1.2rem;
+    }
+  
+    .image-block {
+      max-width: 95vw;
+    }
+  
+    .image-row img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+/*    .pagination button {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    }
+*/
+  }
